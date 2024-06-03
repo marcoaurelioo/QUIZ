@@ -328,7 +328,9 @@ function showAnswer() {
             button.classList.add('correct');
         }
     });
-    nextButton.style.display = 'block';
+    if (questionContainer.style.display == 'block') {
+        nextButton.style.display = 'block';
+    }
     if (errors >= maxErrors) {
         alert('Você excedeu o limite de erros. O jogo será reiniciado.');
         resetGame();
@@ -368,6 +370,7 @@ function startGame() {
     flashcardContainer.style.display = 'block';
     questionContainer.style.display = 'none';
     scoreElement.style.display = 'none';
+    nextButton.style.display ='none';
     showStudyFlashcards();
 }
 
@@ -424,9 +427,9 @@ function resetGame() {
     startButton.style.display = 'block';
     flashcardContainer.style.display = 'none';
     questionContainer.style.display = 'none';
-    if (questionContainer.style.display !== 'block') {
+   if (questionContainer.style.display !== 'block') {
         nextButton.style.display = 'none';
-    }
+   }
     timerElement.style.display = 'block';
     questionTimerElement.style.display = 'block';
     timeLeftElement.textContent = studyTimeLeft;
