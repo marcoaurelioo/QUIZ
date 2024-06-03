@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igualdade em Jogo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <button id="start-button">Iniciar Estudo</button>
+        <div id="flashcard-container" class="hidden">
+            <div id="flashcard-1" class="flashcard">Resumo 1 aparecerá aqui</div>
+            <div id="flashcard-2" class="flashcard">Resumo 2 aparecerá aqui</div>
+            <div id="flashcard-3" class="flashcard">Resumo 3 aparecerá aqui</div>
+            <div id="timer">Tempo restante: <span id="time-left">20</span> segundos</div>
+            <button id="start-questions-button">Começar Perguntas</button>
+        </div>
+        <div id="question-container" class="hidden">
+            <div id="question-text">Pergunta aparecerá aqui</div>
+            <div id="options"></div>
+            <div id="question-timer">Tempo restante: <span id="question-time-left">30</span> segundos</div>
+        </div>
+        <div id="score" class="hidden">Pontuação: 0</div>
+        <button id="next-button" class="hidden">Próxima Pergunta</button>
+        <div id="lives" class="hidden">
+            <div class="life" id="life1"></div>
+            <div class="life" id="life2"></div>
+            <div class="life" id="life3"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
